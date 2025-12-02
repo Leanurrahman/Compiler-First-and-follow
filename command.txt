@@ -1,0 +1,11 @@
+flex lexer.l
+bison -d parser.y
+gcc lex.yy.c parser.tab.c -o parser.exe
+parser
+
+
+bison -d anbns.y
+flex anbns.l
+gcc -o anbns anbns.tab.c lex.yy.c
+./anbns
+exe
